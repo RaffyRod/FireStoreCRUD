@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootswatch/dist/cerulean/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/@popperjs/core/dist/umd/popper.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -117,8 +123,16 @@
               "devServerTarget": "firestoreCRUD:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "firestoreCRUD"
+    }
+  },
+  "defaultProject": "firestoreCRUD",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestorecrud-cac8d": {
+      "hosting": {
+        "firestoreCRUD": [
+          "firestorecrud-cac8d"
+        ]
+      }
+    }
+  }
+}
