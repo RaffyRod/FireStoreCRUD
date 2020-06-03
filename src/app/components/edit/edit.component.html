@@ -1,1 +1,57 @@
-{{idReceta}}
+<div class="row">
+  <div class="col md-6">
+      <a href="" class="btn btn-link">
+        <i class="fa fa-arrow-circle-o-left"></i>Atras
+      </a>
+  </div>
+  <div class="col md-6"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 mx-auto mt-2">
+      <div class="card">
+          <div class="card-header">Editar Receta</div>
+          <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                  <label for="titulo">Titulo</label>
+                  <input type="text" class="form-control" id="titulo" name="titulo">
+                </div>
+
+                <div class="form-group">
+                  <label for="descripcion">Descripcion</label>
+                  <textarea type="text" class="form-control" id="descripcion" name="descripcion"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="ingredientes">Ingredientes</label>
+                  <textarea type="text" class="form-control" id="ingredientes" name="ingredientes"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="preparacion">Preparacion</label>
+                  <textarea type="text" class="form-control" id="preparacion" name="preparacion"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="preparacion">Preparacion</label>
+                  <textarea type="text" class="form-control" id="preparacion" name="preparacion"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="temporada">Temporada</label>
+                    <span class="badge badge.pill badge-dark"></span>
+                    <select multiple name="temporada" id="temporada" class="form-control">
+                        <option>Verano</option>
+                        <option>Otoño</option>
+                        <option>Invierno</option>
+                        <option>promavera</option>
+                    </select>
+                </div>
+                <input type="submit" value="Modificar" class="btn btn-primary btn-block">
+            </form>
+          </div>
+      </div>
+    </div>
+</div>
+
