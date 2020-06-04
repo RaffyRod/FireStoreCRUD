@@ -9,7 +9,7 @@
       <li class="nav-item active">
         <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="isLogin">
         <a class="nav-link" routerLink="/nueva">Nueva Receta</a>
       </li>
       <li class="nav-item">
@@ -18,14 +18,20 @@
     </ul>
 
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
+      <li class="nav-item active" *ngIf="!isLogin">
         <a class="nav-link" routerLink="/login">Login</a>
       </li>
-      <li class="nav-item">
-        <img src="#">
+
+      <li class="nav-item" *ngIf="isLogin">
+        <img src="{{userPicture}}" class="rounded-circle">
       </li>
-      <li class="nav-item">
-        <a class="nav-link" (click)="onLogout()" >LogOut</a>
+
+      <li class="nav-item" *ngIf="isLogin">
+        <span class="nav-link">{{userNombre}}</span>
+      </li>
+
+      <li class="nav-item" *ngIf="isLogin">
+        <a class="nav-link"  href="#"  (click)="onLogout()">Salir</a>
       </li>
     </ul>
 

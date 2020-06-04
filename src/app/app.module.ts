@@ -14,10 +14,16 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DetailsComponent } from './components/details/details.component';
 import { EditComponent } from './components/edit/edit.component';
 import { LoginComponent } from './components/login/login.component';
+
+
+// DB Config
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
+
+// Service
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,9 @@ import { AngularFireModule } from '@angular/fire';
     AngularFirestoreModule
 
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
