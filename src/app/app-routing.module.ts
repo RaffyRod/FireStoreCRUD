@@ -9,15 +9,19 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
 
+// Guard
+import { AuthGuard } from './guards/auth.guard';
+
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'about', component: AboutComponent },
-  {path: 'nueva', component: NuevaRecetaComponent},
+  {path: 'nueva', component: NuevaRecetaComponent, canActivate:[AuthGuard]},
   {path: 'login', component: LoginComponent},
-  {path: 'admin', component: AdminComponent },
-  {path: 'details/:id', component: DetailsComponent },  // siemprew recibe un parametro, por lo que se le pasa el ID
-  {path: 'edit/:id', component: EditComponent },
+  {path: 'admin', component: AdminComponent, canActivate:[AuthGuard] },
+  {path: 'details/:id', component: DetailsComponent, canActivate:[AuthGuard] },  // siemprew recibe un parametro, por lo que se le pasa el ID
+  {path: 'edit/:id', component: EditComponent, canActivate:[AuthGuard] },
   {path: '**', component: NotFoundComponent}
 ];
 

@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class AuthService {
 
   constructor(
-    private afAuth: AngularFireAuth
+    public afAuth: AngularFireAuth
   ) { }
 
   loginGoogle(){

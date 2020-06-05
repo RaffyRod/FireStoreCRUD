@@ -16,6 +16,8 @@ import { EditComponent } from './components/edit/edit.component';
 import { LoginComponent } from './components/login/login.component';
 
 
+
+
 // DB Config
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -24,6 +26,9 @@ import { AngularFireModule } from '@angular/fire';
 
 // Service
 import { AuthService } from './services/auth.service';
+
+// Guard
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,8 @@ import { AuthService } from './services/auth.service';
 
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
