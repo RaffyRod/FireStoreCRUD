@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="col-md-2">
-       <div class="btn-group pull-right mt-4" *ngIf="isOwner">
+       <div class="btn-group pull-right mt-4" *ngIf="idUsuariologado == receta.userId">
          <a routerLink="/edit/{{receta.id}}" class="btn btn-dark">Editar</a>
          <a href="#" class="btn btn-danger" (click)="onClickDelete()">Borrar</a>
        </div>

@@ -19,7 +19,7 @@ export class DetailsComponent implements OnInit {
 
   idReceta: string;
   idUsuariologado: string;
-  isOwner: boolean = false;
+
 
   receta : RecetaInterface = {
 
@@ -53,13 +53,7 @@ export class DetailsComponent implements OnInit {
   }
   getDetallesReceta(){
     this.idReceta = this.route.snapshot.params['id'];
-    this.recetaService.getOneReceta(this.idReceta).subscribe( receta => {
-      this.receta = receta;
-      if(this.idUsuariologado == this.receta.userId ){
-        this.isOwner=true;
-
-      }
-    })
+    this.recetaService.getOneReceta(this.idReceta).subscribe( receta => this.receta = receta);
   }
 
   onClickDelete(){
