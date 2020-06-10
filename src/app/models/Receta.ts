@@ -4,7 +4,8 @@ export interface RecetaInterface{
   titulo?: string;
   descripcion?: string;
   preparacion?: string;
-  tempoorada?: string;
+  ingredientes?:string;
+  temporada?: string;
   fechaPublicacion?: any;
   userId?: string;
   userNombre?: string;

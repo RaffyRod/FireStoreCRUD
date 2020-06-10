@@ -6,20 +6,22 @@
   </div>
 </div>
 
+<!--{{recetas | json}}-->
+
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" *ngFor="let receta of recetas">
       <div class="card d-flex flex-column align-items-start">
         <div class="card-body d-flex flex-column align-items-start">
           <strong class="d-inline-block mb-2 text-primary">
-            <span class="badge badge-pill badge-dark">Temporada</span>
+            <span class="badge badge-pill badge-dark" *ngFor="let item of receta.temporada">{{item}}</span>
           </strong>
 
-          <h3 class="mb-0">TITULO RECETA</h3>
+          <h3 class="mb-0"><a href="/details/{{receta.id}}" class="text-dark">{{receta.titulo}}</a></h3>
           <div class="mb-1 text-muted">
-            <span class="badge badge-pill badge-success">FECHA</span>
+            <span class="badge badge-pill badge-success">{{receta.fechaPublicacion | date: 'dd-MMM'}}</span>
           </div>
-          <p class="card-text mb-auto">DESCRIPCION</p>
-          <a href="#" class="btn-btn-info">Leer Mas..</a>
+          <p class="card-text mb-auto">{{receta.descripcion}}</p>
+          <a href="/details/{{receta.id}}" class="btn-btn-info">Leer Mas..</a>
         </div>
       </div>
     </div>

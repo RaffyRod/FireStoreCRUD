@@ -1,0 +1,7 @@
+.row .col-md-6 .card-body{
+  min-height: 325px;
+}
+
+strong span{
+  margin-right: 9px;
+}
